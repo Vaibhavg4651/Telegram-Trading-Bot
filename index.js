@@ -15,12 +15,7 @@ const logger = createLogger({
         _format.printf(({ timestamp, level, message }) => {
             return `${timestamp} - ${level}: ${message}`;
         })
-    ),
-    transports: [
-        new _transports.Console(),
-        new _transports.File({ filename: 'error.log', level: 'error' }),
-        new _transports.File({ filename: 'combined.log' })
-    ]
+    )
 });
 
 // Constants
